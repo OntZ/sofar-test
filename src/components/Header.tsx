@@ -6,8 +6,7 @@ import { ReactComponent as Logo } from '../assets/logo.svg'
 
 const HeroBar = styled.header`
   color: ${AppColors.white};
-  background-image: url(${headerBackground});
-  background-position: center;
+  background: url(${headerBackground}) no-repeat center;
   background-size: cover;
   height: 400px;
   display: flex;
