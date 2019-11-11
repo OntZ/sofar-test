@@ -16,8 +16,7 @@ const HeroBar = styled.header`
   h1 {
     margin: 0;
     font-size: 5em;
-    font-family: 'Arial Black';
-    font-weight: bold;
+    font-weight: 800;
     text-align: center;
     color: ${AppColors.white};
   }
