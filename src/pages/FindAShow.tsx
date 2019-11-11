@@ -2,7 +2,6 @@ import React, { useEffect, useState }  from 'react';
 import { Events } from '../services/Events';
 import { SofarEvent } from '../models/SofarEvent';
 import { Header } from '../components/Header';
-import { ContentContainer } from '../components/ContentContainer';
 import { EventsList } from '../components/EventsList/EventsList';
 
 export const FindAShow = () => {
@@ -18,9 +17,7 @@ export const FindAShow = () => {
 
     <div>
       <Header />
-      <ContentContainer>
-        <EventsList events={events} />
-      </ContentContainer>
+      <EventsList events={events} />
     </div>
   )
 }
