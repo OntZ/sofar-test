@@ -7,6 +7,7 @@ import moment from 'moment';
 import { EventsContext } from '../../pages/FindAShow/EventsContext';
 import { AppColors } from '../../theme/AppColors';
 import { SofarEventDateFormat } from '../../models/SofarEvent';
+import { Devices } from '../../theme/Breakpoints';
 
 const FilterSection = styled.div`
   width: 100%;
@@ -17,18 +18,35 @@ const FilterSection = styled.div`
     justify-content: space-between;
     padding-top: 12px;
     padding-bottom: 12px;
+
+    @media ${Devices.small} {
+      flex-direction: column;
+    }
   }
 
   .filter-dropdowns {
     display: flex;
+
+    @media ${Devices.small} {
+      flex-direction: column;
+    }
   }
 
   .filter-wrapper {
     margin-right: 40px;
-    width: 270px;
+    width: 100%;;
+    @media ${Devices.small} {
+      margin-top: 30px;
+    }
   }
 
   .filter-controls {
+    @media ${Devices.small} {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 30px;
+    }
+
     .reset-filters {
       color: #555;
       margin-right: 30px;
@@ -46,7 +64,7 @@ const FilterSection = styled.div`
       }
     }
   }
-`;
+  `;
 
 /**
  * Nicer: make filters generic and render autocompletes dynamically based on provided interface
