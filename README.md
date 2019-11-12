@@ -10,7 +10,11 @@ To install dependencies and start please run the following commands
 
 `yarn start`
 
-The app will run on localhost:3000
+The app will run on `localhost:3000`.
+
+For unit tests please run
+
+`yarn test`
 
 ## Alternatively [see it working here](https://ontz.github.io)
 Please could you allow origin * on your staging API (CORS) for a while if you want to see it live. Otherwise it should just work from localhost. Please feel free to get in touch for any clarifications.
