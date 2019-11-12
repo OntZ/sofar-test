@@ -34,8 +34,10 @@ const FilterSection = styled.div`
 
   .filter-wrapper {
     margin-right: 40px;
-    width: 100%;;
+    width: 270px;
+
     @media ${Devices.small} {
+      width: 100%;;
       margin-top: 30px;
     }
   }
