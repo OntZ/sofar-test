@@ -1,8 +1,8 @@
 import React from 'react';
 import styled  from 'styled-components';
 import EventItem from './components/EventItem';
-import { SofarEvent } from '../../models/SofarEvent';
 import { ContentContainer } from '../ContentContainer';
+import { EventsContext } from '../../pages/FindAShow/EventsContext';
 
 const EventsGrid = styled.div`
   padding-top: 40px;
@@ -18,16 +18,15 @@ const EventsGrid = styled.div`
   }
 `;
 
-interface IEventsListProps {
-  events: SofarEvent[];
-}
-
-export const EventsList = ({events}: IEventsListProps) => (
-  <ContentContainer>
-    <EventsGrid>
-      {events.map(event => <div className="event-container">
-        <EventItem event={event} />
-      </div>)}
-    </EventsGrid>
-  </ContentContainer>
+export const EventsList = () => (
+  <EventsContext.Consumer>
+  {events => <ContentContainer>
+      <EventsGrid>
+        {events.map(event => <div key={event.id} className="event-container">
+          <EventItem event={event} />
+        </div>)}
+      </EventsGrid>
+    </ContentContainer>
+  }
+  </EventsContext.Consumer>
 )

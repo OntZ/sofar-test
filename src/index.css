@@ -19,3 +19,13 @@ body {
 b {
   font-weight: 700;
 }
+
+a.no-decoration {
+  text-decoration: none;
+}
+
+.flex-center-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

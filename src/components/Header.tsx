@@ -9,9 +9,6 @@ const HeroBar = styled.header`
   background: url(${headerBackground}) no-repeat center;
   background-size: cover;
   height: 400px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 
   h1 {
     margin: 0;
@@ -32,7 +29,7 @@ const HeroBar = styled.header`
 `;
 
 export const Header = () => (
-  <HeroBar>
+  <HeroBar className="flex-center-content">
     <Logo className="logo" />
     <h1>Find a show</h1>
   </HeroBar>

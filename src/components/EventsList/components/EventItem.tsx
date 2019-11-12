@@ -2,13 +2,14 @@ import React from 'react';
 import styled  from 'styled-components';
 import moment from 'moment';
 import { AppColors } from '../../../theme/AppColors';
-import { SofarEvent } from '../../../models/SofarEvent';
+import { ISofarEvent, SofarEventDateFormat } from '../../../models/SofarEvent';
 
 const EventPanel = styled.a`
   display: block;
   width: 100%;
   height: 100%;
   border: 1px solid ${AppColors.border}
+  border-radius: 4px;
   color: ${AppColors.black}
   text-decoration: none;
 
@@ -40,15 +41,20 @@ const EventPanel = styled.a`
 `;
 
 interface IEventItemProps {
-  event: SofarEvent;
+  event: ISofarEvent;
 }
 
-export default ({event}: IEventItemProps) => <EventPanel image={event.imageUrl} href={event.eventUrl} target="_blank">
+export default ({event}: IEventItemProps) => <EventPanel
+  image={event.imageUrl}
+  href={event.eventUrl}
+  target="_blank"
+  className="no-decoration"
+>
   <div className="event-image" />
   <div className="event-description">
     <div>
       <p>
-        <b>{moment(event.startTime).format('dddd, Do MMMM YYYY')}</b>
+        <b>{moment(event.startTime).format(SofarEventDateFormat)}</b>
       </p>
       <p>Doors open at {moment(event.arrivalTime, 'HH:mm').format('h:mmA')}</p>
     </div>

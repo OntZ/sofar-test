@@ -1,7 +1,7 @@
 import { http } from './Http';
-import { SofarEvent } from '../models/SofarEvent'
+import { ISofarEvent } from '../models/SofarEvent'
 
-interface EventResponse {
+interface IEventResponse {
   id: number,
   city: string;
   image_url: string;
@@ -11,9 +11,9 @@ interface EventResponse {
 }
 
 export class Events {
-  public static get = async ():Promise<SofarEvent[]> => {
-    const eventResponse: EventResponse[] = await http<EventResponse[]>('https://app.staging.sofarsounds.com/api/v1/events');
-    console.log(eventResponse);
+  public static get = async ():Promise<ISofarEvent[]> => {
+    const eventResponse: IEventResponse[] = await http<IEventResponse[]>('https://app.staging.sofarsounds.com/api/v1/events');
+
     return eventResponse.map(event => ({
       id: event.id,
       city: event.city,

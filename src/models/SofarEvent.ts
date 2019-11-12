@@ -1,4 +1,4 @@
-export interface SofarEvent {
+export interface ISofarEvent {
   id: number,
   city: string,
   imageUrl: string,
@@ -6,3 +6,5 @@ export interface SofarEvent {
   arrivalTime: string,
   eventUrl: string,
 }
+
+export const SofarEventDateFormat = 'dddd, Do MMMM YYYY';

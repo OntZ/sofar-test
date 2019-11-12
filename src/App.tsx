@@ -1,5 +1,5 @@
 import React from 'react';
-import { FindAShow } from './pages/FindAShow';
+import { FindAShow } from './pages/FindAShow/FindAShow';
 
 export default () => {
   return (
