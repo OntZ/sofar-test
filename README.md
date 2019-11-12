@@ -26,6 +26,7 @@ Please could you allow origin * on your staging API (CORS) for a while if you wa
 * add "renders without crashing" tests everywhere
 * mock test API calls
 * test rendering result snapshots maybe, it's not particularly a practice of mine
+* add pre-push test hook
 * dockerize the app
 
 I must mention it's my first time using hooks and styled-components so I'm unaware of popular best practices. I've never had commercial experience with them so I've taken the opportunity to learn a bit.
