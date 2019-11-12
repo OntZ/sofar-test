@@ -13,7 +13,7 @@ To install dependencies and start please run the following commands
 The app will run on localhost:3000
 
 ## Alternatively [see it working here](https://ontz.github.io)
-Please could you allow CORS * on your staging API for a while if you want to see it live. Otherwise it should just work from localhost. Please feel free to get in touch for any clarifications.
+Please could you allow origin * on your staging API (CORS) for a while if you want to see it live. Otherwise it should just work from localhost. Please feel free to get in touch for any clarifications.
 
 
 ## what could still be added
